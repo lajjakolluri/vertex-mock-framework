@@ -1,0 +1,19 @@
+{
+  "predictions": [
+    {
+      "content": "This is a mocked response from the Vertex SDK Testing 
+Framework!",
+      "safetyAttributes": {
+        "blocked": false,
+        "categories": [],
+        "scores": []
+      }
+    }
+  ],
+  "metadata": {
+    "tokenMetadata": {
+      "inputTokenCount": 10,
+      "outputTokenCount": 12
+    }
+  }
+}
