@@ -26,8 +26,7 @@ generation_config)
         response = self._default_response.copy()
         
         if "hello" in prompt.lower():
-            response["predictions"][0]["content"] = "Hello! I am your 
-mocked Vertex AI assistant."
+            response["predictions"][0]["content"] = "Hello! I am your mocked Vertex AI assistant."
 
         if self.use_cache:
             self.cache.set(self.model_name, prompt, generation_config, 

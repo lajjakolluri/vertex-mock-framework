@@ -1,8 +1,7 @@
 {
   "predictions": [
     {
-      "content": "This is a mocked response from the Vertex SDK Testing 
-Framework!",
+      "content": "This is a mocked response from the Vertex SDK Testing Framework!",
       "safetyAttributes": {
         "blocked": false,
         "categories": [],
