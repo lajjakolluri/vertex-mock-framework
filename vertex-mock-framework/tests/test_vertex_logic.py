@@ -7,3 +7,4 @@ def test_vertex_logic_response():
         ]
     }
     assert response["predictions"][0]["content"] == "Hello! I am your mock Vertex model."
+# Cache bust timestamp: 2026-05-28
