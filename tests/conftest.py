@@ -1,14 +1,8 @@
-import pytest
 import os
-from unittest.mock import patch
-from vertex_mock.client import MockGenerativeModel
+import pytest
+from unittest.mock import MagicMock
+import sys
 
-@pytest.fixture(autouse=True)
-def mock_vertex_environment():
-    if os.getenv("ENVIRONMENT") == "CI" or os.getenv("MOCK_VERTEX") == 
-"true":
-        with patch('vertexai.generative_models.GenerativeModel', 
-new=MockGenerativeModel):
-            yield
-    else:
-        yield
+# Force mock mode if explicitly set via environment variables
+if os.getenv("ENVIRONMENT") == "CI" or os.getenv("MOCK_VERTEX") == "true":
+    sys.modules['google.cloud.aiplatform'] = MagicMock()
