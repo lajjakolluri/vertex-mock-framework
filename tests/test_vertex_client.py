@@ -8,3 +8,4 @@ def test_unknown_prompt():
 
 def test_case_insensitive():
     assert call_vertex("HeLLo") == "Hi! How can I help you?"
+
